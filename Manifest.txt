@@ -1,4 +1,5 @@
 .gitignore
+.travis.yml
 .yardopts
 DEVELOPERS_NOTE.md
 Gemfile
@@ -137,6 +138,7 @@ ext/opencv/window.h
 images/CvMat_sobel.png
 images/CvMat_sub_rect.png
 images/CvSeq_relationmap.png
+install-ruby-opencv-with-rubyinstaller-on-windows.md
 lib/opencv.rb
 lib/opencv/psyched_yaml.rb
 lib/opencv/version.rb
