@@ -42,6 +42,9 @@ A sample to load and display an image. An equivalent code of [this tutorial](htt
 require 'opencv'
 include OpenCV
 
+# Usage: `ruby display_image.rb ImageToLoadAndDisplay`
+# ARGV[0] is the image file, for example, './data/lena.jpg'
+
 if ARGV.size == 0
   puts "Usage: ruby #{__FILE__} ImageToLoadAndDisplay"
   exit
@@ -68,13 +71,17 @@ A sample to detect faces from an image.
 require 'opencv'
 include OpenCV
 
+# Usage: `ruby face_recognizer.rb source destination`
+# ARGV[0] is the source image, for example, './data/face.jpg'
+# ARGV[1] is the destination image, for example, './data/face_detected.jpg'
+
 if ARGV.length < 2
-  puts "Usage: ruby #{__FILE__} source dest"
+  puts "Usage: `ruby #{__FILE__} source destination`"
   exit
 end
 
-data = './data/haarcascades/haarcascade_frontalface_alt.xml'
-detector = CvHaarClassifierCascade::load(data)
+DATA = './data/haarcascades/haarcascade_frontalface_alt.xml'
+detector = CvHaarClassifierCascade::load(DATA)
 image = CvMat.load(ARGV[0])
 detector.detect_objects(image).each do |region|
   color = CvColor::Blue
@@ -88,6 +95,80 @@ GUI::wait_key
 ```
 
 For more samples, see [examples/*.rb](examples)
+
+## OpenCV Modules
+
+The Ruby wrapper for OpenCV provides access to a wide range of image processing and computer vision functionalities through the following modules:
+
+### Main Modules
+
+- `OpenCV::CvPoint`
+- `OpenCV::CvPoint2D32f`
+- `OpenCV::CvPoint3D32f`
+- `OpenCV::CvSize`
+- `OpenCV::CvSize2D32f`
+- `OpenCV::CvRect`
+- `OpenCV::CvScalar`
+- `OpenCV::CvColor`
+- `OpenCV::CvSlice`
+- `OpenCV::CvTermCriteria`
+- `OpenCV::CvBox2D`
+- `OpenCV::CvFont`
+- `OpenCV::IplConvKernel`
+- `OpenCV::CvMoments`
+- `OpenCV::CvHuMoments`
+- `OpenCV::CvConvexityDefect`
+- `OpenCV::CvSURFPoint`
+- `OpenCV::CvSURFParams`
+- `OpenCV::CvMemStorage`
+- `OpenCV::CvSeq`
+- `OpenCV::Curve`
+- `OpenCV::PointSet`
+- `OpenCV::CvChain`
+- `OpenCV::CvContour`
+- `OpenCV::CvContourTree`
+- `OpenCV::CvMat`
+- `OpenCV::IplImage`
+- `OpenCV::CvHistogram`
+- `OpenCV::CvCapture`
+- `OpenCV::CvVideoWriter`
+- `OpenCV::CvLine`
+- `OpenCV::CvTwoPoints`
+- `OpenCV::CvCircle32f`
+- `OpenCV::CvFeatureTree`
+- `OpenCV::CvConnectedComp`
+- `OpenCV::CvAvgComp`
+- `OpenCV::CvHaarClassifierCascade`
+
+### Algorithms and Face Recognizers
+
+- `OpenCV::Algorithm`
+- `OpenCV::FaceRecognizer`
+- `OpenCV::EigenFaces`
+- `OpenCV::FisherFaces`
+- `OpenCV::LBPH`
+
+### Graphical User Interface (GUI)
+
+The `OpenCV::GUI` module includes:
+
+- `OpenCV::GUI::Window`
+- `OpenCV::GUI::Trackbar`
+- `OpenCV::GUI::MouseEvent`
+
+### Error Codes
+
+The following are specific error codes used within the library:
+
+- `OpenCV::CvError`
+- `OpenCV::CvStsError`
+- `OpenCV::CvStsParseError`
+- `OpenCV::CvGpuApiCallError`
+- Other error codes
+
+---
+
+This listing provides an overview of the modules and functionalities available in the Ruby wrapper for OpenCV. For more information on how to use these modules in your projects, refer to the examples included in the `/examples` folder.
 
 ## LICENSE
 
