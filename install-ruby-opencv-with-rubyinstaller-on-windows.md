@@ -63,7 +63,7 @@ Open ```cmd.exe``` prompt.
 Go to folder ```D:/opencv/build/opencv-2.4.13```
 Execute the following commands.
 
-```
+```bash
 %DEVKIT_PATH%/mingw/bin/mingw32-make.exe
 %DEVKIT_PATH%/mingw/bin/mingw32-make.exe install
 ```
@@ -80,8 +80,11 @@ gem install ruby-opencv -- --with-opencv-include=%OPENCV_INSTALL_PATH%/include -
 
 And try to use ruby-opencv.
 
+```bash
+irb
 ```
-D:\>irb
+
+```ruby
 irb(main):001:0> require 'opencv'
 => true
 irb(main):002:0> OpenCV::CV_VERSION
