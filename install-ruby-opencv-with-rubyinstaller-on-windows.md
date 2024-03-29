@@ -73,8 +73,15 @@ Execute the following commands.
 
 Run the following commands in ```cmd.exe```.
 
+1. Set temporary environment variables
+
 ```bash
 path %OPENCV_INSTALL_PATH%\x64\mingw\bin;%DEVKIT_PATH%\mingw\bin;%PATH%
+```
+
+2. Install ruby-opencv
+
+```bash
 gem install ruby-opencv -- --with-opencv-include=%OPENCV_INSTALL_PATH%/include --with-opencv-lib=%OPENCV_INSTALL_PATH%/x64/mingw/lib
 ```
 
