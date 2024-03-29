@@ -28,7 +28,7 @@ hoespec = Hoe.spec 'ruby-opencv' do |s|
   s.spec_extras = { :extensions => ['ext/opencv/extconf.rb'] }
 
   s.test_globs = ['test/test_*.rb']
-  s.urls = ['https://github.com/ruby-opencv/ruby-opencv/']
+  s.urls = {'home' => 'https://github.com/ruby-opencv/ruby-opencv/'}
 
   s.extra_dev_deps << ['rake-compiler', '~> 0'] << ['hoe-gemspec', '~> 0']
 
