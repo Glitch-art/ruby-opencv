@@ -51,8 +51,6 @@ Then, restart ```cmd.exe```.
 Open ```cmd.exe``` and run the following commands.
 
 ```bash
-cmake -S %SOURCE_PATH% -B %OPENCV_BUILD_PATH% -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=%OPENCV_INSTALL_PATH% -DCMAKE_MAKE_PROGRAM=%DEVKIT_PATH%/mingw/bin/mingw32-make.exe -DCMAKE_C_COMPILER=%DEVKIT_PATH%/mingw/bin/gcc.exe -DCMAKE_CXX_COMPILER=%DEVKIT_PATH%/mingw/bin/g++.exe -DBUILD_PERF_TESTS=OFF
-
 cmake -S %SOURCE_PATH% -B %OPENCV_BUILD_PATH% -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=%OPENCV_INSTALL_PATH% -DCMAKE_MAKE_PROGRAM=%DEVKIT_PATH%/mingw/bin/mingw32-make.exe -DCMAKE_C_COMPILER=%DEVKIT_PATH%/mingw/bin/gcc.exe -DCMAKE_CXX_COMPILER=%DEVKIT_PATH%/mingw/bin/g++.exe -DBUILD_PERF_TESTS=OFF -DBUILD_opencv_java=OFF
 ```
 
