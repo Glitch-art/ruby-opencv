@@ -9,7 +9,7 @@ An OpenCV wrapper for Ruby.
 
 ## Requirement
 
-* OpenCV 2.4.x
+* OpenCV 2.4.13
   * [Download](http://sourceforge.net/projects/opencvlibrary/)
   * [Install guide](http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction)
 * Ruby 2.x
