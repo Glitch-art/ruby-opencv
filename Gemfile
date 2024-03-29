@@ -7,3 +7,6 @@ group :development do
   gem "yard"
 end
 
+group :test, :development do
+  gem 'test-unit', '~> 3.6', '>= 3.6.2'
+end

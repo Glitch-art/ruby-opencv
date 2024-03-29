@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 # -*- mode: ruby; coding: utf-8 -*-
+
+$LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
+
 require 'test/unit'
 require 'digest/md5'
 require 'opencv'
