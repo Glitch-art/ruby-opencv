@@ -75,7 +75,7 @@ Execute the following commands.
 
 Run the following commands in ```cmd.exe```.
 
-```
+```bash
 path %OPENCV_INSTALL_PATH%\x64\mingw\bin;%DEVKIT_PATH%\mingw\bin;%PATH%
 gem install ruby-opencv -- --with-opencv-include=%OPENCV_INSTALL_PATH%/include --with-opencv-lib=%OPENCV_INSTALL_PATH%/x64/mingw/lib
 ```

@@ -26,3 +26,5 @@ Gemfile.lock
 .RUBYARCHDIR.*
 .bundle
 
+# IDEs
+.vscode
