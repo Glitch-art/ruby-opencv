@@ -5,32 +5,35 @@
 An OpenCV wrapper for Ruby.
 
 * Web site: <https://github.com/ruby-opencv/ruby-opencv>
-* Ruby 2.x and OpenCV 2.4.13 are supported.
 * [Documentation](http://www.rubydoc.info/gems/ruby-opencv/frames)
 
 ## Requirement
 
-* OpenCV <http://opencv.org/>
+* OpenCV 2.4.x
   * [Download](http://sourceforge.net/projects/opencvlibrary/)
   * [Install guide](http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction)
+* Ruby 2.x
+  * [RubyInstaller](http://rubyinstaller.org/) (Windows)
+  * [RVM](https://rvm.io/) (Linux/Mac)
 
 ## Install
+
 ### Linux/Mac
 1. Install [OpenCV](http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/)
 2. Install ruby-opencv
 
-```
-$ gem install ruby-opencv -- --with-opencv-dir=/path/to/opencvdir
+```bash
+gem install ruby-opencv -- --with-opencv-dir=/path/to/opencvdir
 ```
 
 Note: **/path/to/opencvdir** is the directory where you installed OpenCV.
-
 
 ### Windows (RubyInstaller)
 
 See [install-ruby-opencv-with-rubyinstaller-on-windows.md](install-ruby-opencv-with-rubyinstaller-on-windows.md).
 
 ## Sample code
+
 ### Load and Display an Image
 
 A sample to load and display an image. An equivalent code of [this tutorial](http://docs.opencv.org/doc/tutorials/introduction/display_image/display_image.html#display-image).
@@ -84,11 +87,8 @@ window.show(image)
 GUI::wait_key
 ```
 
-For more samples, see examples/*.rb
+For more samples, see [examples/*.rb](examples)
 
-## LICENSE:
+## LICENSE
 
-The BSD Liscense
-
-see LICENSE.txt
-
+The BSD Liscense, see [License.txt](License.txt)
